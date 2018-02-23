@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="crypto_bot.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="crypto_bot.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="cryptobot:*" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:3000/" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>

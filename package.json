@@ -1,0 +1,12 @@
+{
+  "name": "cryptobot",
+  "version": "0.0.1",
+  "description": "Cryptocurency Discord Bot",
+  "main": "bot.js",
+  "author": "Mark \"Triippz\" Tripoli",
+  "dependencies": {
+    "bufferutil": "^3.0.3",
+    "discord.js": "^11.3.0",
+    "opusscript": "0.0.6"
+  }
+}
