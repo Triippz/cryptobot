@@ -1,4 +1,6 @@
 
+var fs = require('fs');
+
 try {
     var Discord = require('discord.js');
 } catch ( e ) {
@@ -14,8 +16,28 @@ try {
     const auth = require("./auth.json");
 } catch ( e )
 {
-    console.log("Please create an auth.json like the auth.json example, with a bot token\n" + e.stack );
+    console.log("Please create an auth.json, with a bot token\n" + e.stack );
     process.exit();
+}
+
+/* get config info */
+var Config = {};
+try {
+    Config = require("./config.json");
+} catch ( e )
+{
+    Config.debug = false;
+    Config.commandPrefix = "!";
+    try{
+        if(fs.lstatSync("./config.json").isFile()){
+            console.log("WARNING: config.json found but we couldn't read it!\n" + e.stack);
+        }
+    } catch(e2){
+        fs.writeFile("./config.json",JSON.stringify(Config,null,2));
+    }
+}
+if(!Config.hasOwnProperty("commandPrefix")){
+    Config.commandPrefix = '!';
 }
 
 
@@ -27,6 +49,8 @@ bot.on("ready", function (evt) {
     console.log("Logged in as: ");
     console.log(bot.username + ' - (' + bot.id + ')');
 });
+
+console.log("The Bot's command prefix is : " + Config.prefix);
 
 bot.on('message', message => {
     /* This bot will listen for messages that present a crypto's ID (BTC,LTC,XLM, etc...) */
