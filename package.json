@@ -1,12 +1,12 @@
 {
-  "name": "cryptobot",
+  "name": "discord-cryptobot",
   "version": "0.0.1",
   "description": "Cryptocurency Discord Bot",
   "main": "node crypto_bot.js",
   "author": "Mark \"Triippz\" Tripoli",
   "dependencies": {
     "discord.js": "^11.3.0",
-    "node-coinmarketcap": "^0.2.0",
+    "node-coinmarketcap": "^0.2.0"
   },
   "engines": {
     "node": "8.9.4"
