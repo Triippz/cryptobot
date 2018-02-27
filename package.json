@@ -2,11 +2,17 @@
   "name": "cryptobot",
   "version": "0.0.1",
   "description": "Cryptocurency Discord Bot",
-  "main": "bot.js",
+  "main": "node crypto_bot.js",
   "author": "Mark \"Triippz\" Tripoli",
   "dependencies": {
-    "bufferutil": "^3.0.3",
     "discord.js": "^11.3.0",
-    "opusscript": "0.0.6"
+    "node-coinmarketcap": "^0.2.0",
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node crypto_bot.js"
   }
 }

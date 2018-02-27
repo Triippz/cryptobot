@@ -1,0 +1,49 @@
+
+const Config = require("./config.json");
+module.exports = {
+    cmdRun: function (client, message, args, command)
+{
+    switch (command) {
+        case "asl":
+            let [age, sex, loc] = args;
+            var aslMess;
+
+            if (age >= 18) {
+                if (age >= 50) {
+                    if (sex === "male" || sex === "m") {
+                        aslMess = "Get that wrinkle dioch out of here homie";
+                    } else if (sex === "female" || sex === "f") {
+                        aslMess = "Pussy lips so saggy, ya could fly awayyyyy. Still hit doe...."
+                    }
+                } else {
+                    aslMess = message.author.username
+                        + ', I see you\'re ' + age + " years old"
+                        + " ,a " + sex
+                        + " , from" + loc
+                        + ", and old enough to fuck. I like, I like...";
+                }
+            } else {
+                aslMess = message.author.username
+                    + ', I see you\'re ' + age + " years old"
+                    + " ,a " + sex
+                    + " , from" + loc
+                    + ", and young as fuck. Stop fucking with shit kid.";
+            }
+            message.reply(aslMess);
+            break;
+        case "ping":
+            const mess = "What the fuck do you want?";
+            message.channel.reply(mess);
+            break;
+        //ignore other bots
+        case message.author.bot:
+            return;
+            break;
+        case "help":
+            message.channel.reply(Config.commands);
+            break;
+    }
+}
+}
+//Export module for use in crypto_bot.js
+//module.exports = CMD;
