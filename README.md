@@ -24,3 +24,8 @@ All commands must be preceeded by a '$' symbol to activate the bot.
 - $top <NUMBER>: Returns the top x number of coins. 
     - $top 10 : returns top 10 coins
     - $top 5: returns top 5 coins
+    
+- $news <String>: Returns 3 news stories via Google RSS feed
+    - $news bitcoin
+    - $news XLM
+    - $news LitePay

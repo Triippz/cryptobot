@@ -5,7 +5,8 @@
     "$ping: to check if alive\n",
     "$info <COIN_ID>: to find out details of a coin, (Ex. !price btc, !price xlm, !price eth)\n",
     "$top <NUMBER>: Displays the top x coins. (Ex. $top 10, $top 5)\n",
-    "$coins <COIN1> <COIN2> <COIN3> <COIN4>: Displays UP TO 4 different coins with their stats. (Ex. $coins bitcoin stellar litecoin cardano)\n"
+    "$coins <COIN1> <COIN2> <COIN3> <COIN4>: Displays UP TO 4 different coins with their stats. (Ex. $coins bitcoin stellar litecoin cardano)\n",
+    "$news <STRING>: Returns 3 news stories via Google RSS Feed. You can search for crypto or anything else. (Ex. $news bitcoin, $news XLM)"
   ]
 }
 
