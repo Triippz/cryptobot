@@ -1,6 +1,6 @@
 {
   "name": "discord-cryptobot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cryptocurency Discord Bot",
   "main": "node crypto_bot.js",
   "author": "Mark \"Triippz\" Tripoli",
