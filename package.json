@@ -6,6 +6,7 @@
   "author": "Mark \"Triippz\" Tripoli",
   "dependencies": {
     "discord.js": "^11.3.0",
+    "google-news-rss": "^0.4.1",
     "node-coinmarketcap": "^0.2.0"
   },
   "engines": {

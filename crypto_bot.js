@@ -2,6 +2,8 @@
 var fs = require('fs');
 var CoinMarketCap = require('node-coinmarketcap');
 var coinmarketcap = new CoinMarketCap();
+var GoogleFeed = require('google-news-rss');
+var googfeed = new GoogleFeed();
 
 try {
     var Discord = require('discord.js');
@@ -139,10 +141,30 @@ dClient.on('message', message => {
                     message.reply ( getCoinInfoStr( coin ));
                 });
             break;
+        case "news":
+            let [ newsCoin ] = args;
+            googfeed
+                .search(newsCoin,1)
+                .then(resp => message.reply(printNews(resp)));
+            break;
     }
 });
 
 dClient.login(auth.token);
+
+function printNews ( newsJson )
+{
+    var responseString;
+    var link = newsJson[0].link;
+    console.log(link);
+    var link2 = newsJson[1].link;
+    console.log(link2);
+    var link3 = newsJson[2].link;
+    console.log(link3);
+
+    responseString = "Some recent news:\n\n"+link + "\n" + link2 +"\n"+ link3 +"\n";
+    return responseString;
+}
 
 function getCoinInfoStr ( coin ){
     var infoStr = "\nCoin: " + coin.name
